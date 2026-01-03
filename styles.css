@@ -22,17 +22,33 @@
     --header-height: 64px;
 }
 
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-bg: #1a1a2e;
-        --color-bg-secondary: #16213e;
-        --color-text: #e8e8e8;
-        --color-text-muted: #a0a0a0;
-        --color-border: #2d3748;
-        --color-accent: #0f3460;
-        --color-link: #63b3ed;
-    }
+/* Dark Mode - Manual Toggle */
+[data-theme="dark"] {
+    --color-bg: #1a1a2e;
+    --color-bg-secondary: #16213e;
+    --color-text: #e8e8e8;
+    --color-text-muted: #a0a0a0;
+    --color-border: #2d3748;
+    --color-accent: #0f3460;
+    --color-link: #63b3ed;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 0.4em 0.8em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 html {
